@@ -1,0 +1,18 @@
+@media all and (max-width:500px){ /*~500px*/
+    *{
+        background-color: rgb(75, 173, 80);
+        color:white
+    }
+}
+
+@media all and (min-width:501px)  and (orientation:portrait){ /*~500px*/
+    *{
+        background-color: rgb(255, 0, 106);
+    }
+}
+
+@media all and (min-width:501px)  and (orientation:landscape){ /*~500px*/
+    *{
+        background-color: rgb(255, 0, 106);
+    }
+}

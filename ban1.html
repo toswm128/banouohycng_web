@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 홈페이지 연습</title>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        [class*="col-"] {
+            box-sizing:border-box;
+            float:left;
+            padding:0 10px;    
+        }
+        .col-1{width:8.33%;}
+        .col-2{width:16.66%;}
+        .col-3{width:25%;}
+        .col-4{width:33.33%;}
+        .col-5{width:41.66%;}
+        .col-6{width:50%;}
+        .col-7{width:58.33%;}
+        .col-8{width:66.66%;}
+        .col-9{width:75%;}
+        .col-10{width:83.33%;}
+        .col-11{width:91.66%;}
+        .col-12{width:100%;}
+
+        .hidden{display: none;}
+        .show{display: inline-block;}
+        .show-inline{display: inline;}
+        .show-block{display: block;}
+
+        heder{
+            margin-top:10px;
+        }
+
+        #headerCon{
+            height: 150px;
+            background-color: rgb(104, 105, 173);
+        }
+
+        aside ul li{
+            background-color: aqua;
+            margin:10px 0;
+            height: 100px;
+        }
+
+        section article{
+            margin:10px 0 0 0;
+        }
+
+        section article:nth-child(1) {/* 1번째 article에 적용 */
+            height: 200px;
+            background-color: aquamarine;
+        }
+        section article:nth-child(2) {/* 1번째 article에 적용 */
+            height: 300px;
+            background-color: black;
+        }
+
+        footer{
+            margin:10px 0;
+        }
+        #footerCon{
+            height: 100px;
+            background-color: burlywood;
+        }
+        /***************** 미디어쿼리 사용 *****************/
+        @media all and (min-width:500px) {
+            .col-xs-1{width:8.33%;}
+            .col-xs-2{width:16.66%;}
+            .col-xs-3{width:25%;}
+            .col-xs-4{width:33.33%;}
+            .col-xs-5{width:41.66%;}
+            .col-xs-6{width:50%;}
+            .col-xs-7{width:58.33%;}
+            .col-xs-8{width:66.66%;}
+            .col-xs-9{width:75%;}
+            .col-xs-10{width:83.33%;}
+            .col-xs-11{width:91.66%;}
+            .col-xs-12{width:100%;}
+
+            .hidden-xs{display: none;}
+            .show-xs{display: inline-block;}
+            .show-xs-inline{display: inline;}
+            .show-xs-block{display: block;}
+        }
+        @media all and (min-width:700px) {
+            .col-sm-1{width:8.33%;}
+            .col-sm-2{width:16.66%;}
+            .col-sm-3{width:25%;}
+            .col-sm-4{width:33.33%;}
+            .col-sm-5{width:41.66%;}
+            .col-sm-6{width:50%;}
+            .col-sm-7{width:58.33%;}
+            .col-sm-8{width:66.66%;}
+            .col-sm-9{width:75%;}
+            .col-sm-10{width:83.33%;}
+            .col-sm-11{width:91.66%;}
+            .col-sm-12{width:100%;}
+
+            .hidden-sm{display: none;}
+            .show-sm{display: inline-block;}
+            .show-sm-inline{display: inline;}
+            .show-sm-block{display: block;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header class="col-12">    
+            <div id="headerCon" class="col-12">
+                <div id="logo">     </div>
+                <div id="quick_con"></div>
+            </div>
+        </header>
+        <aside class="col-12 col-sm-3">
+            <ul>
+                <li>이것은 내용입니다.</li>
+                <li>이것은 내용입니다.</li>
+                <li>이것은 내용입니다.</li>
+                <li>이것은 내용입니다.</li>
+            </ul>
+        </aside>
+
+        <section class="col-12 col-sm-9">
+            <article class="col-12"></article>
+            <article class="col-12"></article>
+        </section>
+
+        <footer class="col-12">
+            <div id="footerCon"></div>
+        </footer>
+    </div>
+</body>
+</html>

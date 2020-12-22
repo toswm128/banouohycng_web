@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 연습 2번</title>
+    <!-- IE9 이하 버전에서 미디어 쿼리 동작 되도록 넣어줌-->
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html, body, #wrapper{
+            width:100%;
+            height:100%;
+        }
+        .box{
+            display: none; /*숨김*/
+            background-color: #9c9b99;
+        }
+        @media all and (max-width:700px){
+            .xs{display:block; height: 25%;}
+            .sm{display:none;}
+            .ml{display:none;}
+            .lg{display:none;}
+        }
+        @media all and (min-width:701px){
+            .xs{display:none;}
+            .sm{display:block; height: 50%;}
+            .ml{display:none;}
+            .lg{display:none;}
+        }
+        @media all and (min-width:801px){
+            .xs{display:none;}
+            .sm{display:none;}
+            .ml{display:block; height: 75%;}
+            .lg{display:none;}
+        }
+        @media all and (min-width:901px){
+            .xs{display:none;}
+            .sm{display:none;}
+            .ml{display:none;}
+            .lg{display:block; height: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="box xs">아주작음</div>
+        <div class="box sm">작음</div>
+        <div class="box ml">조금 큼</div>
+        <div class="box lg">아주 큼</div>
+    </div>
+</body>
+</html>
